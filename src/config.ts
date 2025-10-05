@@ -105,7 +105,7 @@ export const siteConfig = {
     {
     school: "National Open and Distance University (UNAD)",
     degree: "Bachelor’s in Systems Engineering",
-    dateRange: "2022 - 2026",
+    dateRange: "Feb 2022 - Jul 2026",
     achievements: [
       "Currently in 8th semester",
       "Focus on software development, systems analysis, and data science",
@@ -115,7 +115,7 @@ export const siteConfig = {
   {
     school: "National Learning Service (SENA)",
     degree: "Administrative Assistant Technician",
-    dateRange: "2020",
+    dateRange: "Ene 2018 - Nov 2020",
     achievements: [
       "Completed training program",
       "Developed skills in administrative management, documentation, and office tools",
