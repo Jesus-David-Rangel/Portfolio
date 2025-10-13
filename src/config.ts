@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Jesús David Rangel", // David Applebaum //
-  title: "Data Analyst 📊 ~ Administrative Assistant 🗂️ ~ Systems Engineering Student 👨‍💻",
+  title: "Data Analyst 📊 ~ Bussines Intelligence 💼 ~ Statistician 🗂️ ~ Systems Engineering 👨‍💻",
   description: "Sitio web del Portafolio de Jesús David Rangel",
   accentColor: "#1d4ed8",
   social: {
@@ -89,7 +89,7 @@ export const siteConfig = {
   ],
 },
 {
-  company: "CNC",
+  company: "Centro Nacional de Consultoría (CNC)",
   title: "Data Analysis Assistant",
   dateRange: "Feb 2023 - Oct 2024",
   bullets: [
