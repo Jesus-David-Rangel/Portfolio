@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Jesús David Rangel", // David Applebaum //
-  title: "Data Analyst 📊 ~ Bussines Intelligence 💼 ~ Statistician 🗂️ ~ Systems Engineering 👨‍💻",
+  title: "Data Analyst 📊 ~ Business Intelligence 💼 ~ Statistician 🗂️ ~ Systems Engineering 👨‍💻",
   description: "Sitio web del Portafolio de Jesús David Rangel",
   accentColor: "#1d4ed8",
   social: {
