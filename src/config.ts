@@ -23,35 +23,38 @@ export const siteConfig = {
     link: "https://www.kaggle.com/code/jessdavidsilvarangel/sales-analysis",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
   },
+
+  {
+    name: "Mall Customer Segmentation",
+    description:
+      "Segmentation analysis of mall customers to identify distinct groups based on purchasing behavior and demographics. Utilizes clustering techniques and visualization tools to inform targeted marketing strategies.",
+    link: "https://github.com/Jesus-David-Rangel/Customers-Segmentation-Analysis/blob/main/main.ipynb",
+    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+  },
+
   {
     name: "California Housing Price Prediction",
     description:
       "Predictive modeling project analyzing the California housing market. Includes spatial and correlational analysis to understand income distribution, property value trends, and key predictors influencing housing prices.",
-    link: "https://github.com/Jesus-David-Silva-Rangel-19/Housing-Price-Analysis/blob/main/Housing_Price_Analysis.ipynb",
+    link: "https://github.com/Jesus-David-Rangel/Housing-Price-Analysis/blob/main/Housing_Price_Analysis.ipynb",
     skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
   },
+
   {
     name: "Diabetes Risk Prediction & Demographic Analysis",
     description:
       "Exploratory data analysis focused on identifying demographic and lifestyle factors linked to diabetes risk. Features predictive modeling and visualization to highlight key health indicators.",
-    link: "https://github.com/Jesus-David-Silva-Rangel-19/Diabetes-Data-Analysis-with-Python/blob/main/Diabetes-pred.ipynb",
+    link: "https://github.com/Jesus-David-Rangel/Diabetes-Data-Analysis-with-Python/blob/main/Diabetes-pred.ipynb",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
   },
+
   {
     name: "STEM Academic Performance Analysis",
     description:
       "Data-driven exploration of student performance in STEM subjects to identify success factors and patterns in academic achievement, supporting evidence-based educational strategies.",
-    link: "https://github.com/Jesus-David-Silva-Rangel-19/Student-Data-Analysis-with-Python/blob/main/Student_Data_Analysis.ipynb",
+    link: "https://github.com/Jesus-David-Rangel/Student-Data-Analysis-with-Python/blob/main/Student_Data_Analysis.ipynb",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-  },
-  {
-    name: "Titanic Survival Data Analysis",
-    description:
-      "Exploratory and predictive analysis of the Titanic dataset to identify survival patterns and build classification models using machine learning algorithms.",
-    link: "https://github.com/Jesus-David-Silva-Rangel-19/Titanic-Data-Analysis/blob/main/titanic-analysis.ipynb",
-    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
-  },
-
+  }
 
   ],
   experience: [
