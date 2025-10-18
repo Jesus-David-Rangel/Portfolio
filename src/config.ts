@@ -21,7 +21,7 @@ export const siteConfig = {
     description:
       "Comprehensive data analysis of an online retail store to uncover purchasing patterns, seasonal trends, and customer behavior using Python libraries for data cleaning, visualization, and reporting.",
     link: "https://www.kaggle.com/code/jessdavidsilvarangel/sales-analysis",
-    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scipy", "StatsModels"],
   },
 
   {
@@ -29,7 +29,7 @@ export const siteConfig = {
     description:
       "Segmentation analysis of mall customers to identify distinct groups based on purchasing behavior and demographics. Utilizes clustering techniques and visualization tools to inform targeted marketing strategies.",
     link: "https://github.com/Jesus-David-Rangel/Customers-Segmentation-Analysis/blob/main/main.ipynb",
-    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
   },
 
   {
@@ -38,6 +38,14 @@ export const siteConfig = {
       "Predictive modeling project analyzing the California housing market. Includes spatial and correlational analysis to understand income distribution, property value trends, and key predictors influencing housing prices.",
     link: "https://github.com/Jesus-David-Rangel/Housing-Price-Analysis/blob/main/Housing_Price_Analysis.ipynb",
     skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+  },
+
+  {
+    name: "Identification of Risk Factors in Loan Default",
+    description:
+      "Exploratory data analysis to identify key risk factors contributing to loan default. Utilizes statistical methods and visualization techniques to uncover patterns and inform risk mitigation strategies.",
+    link: "https://github.com/Jesus-David-Rangel/Financial-Risk-Analysis-and-Forecasting",
+    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
   },
 
   {
