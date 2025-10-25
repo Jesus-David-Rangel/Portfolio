@@ -1,0 +1,365 @@
+---
+// Componente del botón flotante para cambiar idioma
+---
+
+<div id="language-toggle" class="fixed bottom-6 right-6 z-50">
+    <button
+        id="lang-btn"
+        class="group relative w-14 h-14 bg-white/90 backdrop-blur-sm border border-gray-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        aria-label="Cambiar idioma"
+    >
+        <div class="flex items-center justify-center h-full">
+            <span
+                id="flag-icon"
+                class="text-2xl transition-transform duration-300 group-hover:scale-110"
+            >
+                🇪🇸
+            </span>
+        </div>
+
+        <!-- Tooltip -->
+        <div
+            id="tooltip"
+            class="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded-lg opacity-0 pointer-events-none transition-opacity duration-300 whitespace-nowrap"
+        >
+            <span id="tooltip-text">Cambiar a inglés</span>
+            <div
+                class="absolute top-full right-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"
+            >
+            </div>
+        </div>
+    </button>
+</div>
+
+<script>
+    import { siteConfig } from "../config";
+
+    class LanguageManager {
+        constructor() {
+            this.currentLang = localStorage.getItem("language") || "es";
+            this.button = document.getElementById("lang-btn");
+            this.flagIcon = document.getElementById("flag-icon");
+            this.tooltip = document.getElementById("tooltip");
+            this.tooltipText = document.getElementById("tooltip-text");
+
+            this.init();
+        }
+
+        init() {
+            // Aplicar idioma guardado
+            this.updateUI();
+            this.applyLanguage();
+
+            // Event listeners
+            this.button?.addEventListener("click", () => this.toggleLanguage());
+            this.button?.addEventListener("mouseenter", () =>
+                this.showTooltip(),
+            );
+            this.button?.addEventListener("mouseleave", () =>
+                this.hideTooltip(),
+            );
+        }
+
+        toggleLanguage() {
+            this.currentLang = this.currentLang === "es" ? "en" : "es";
+            localStorage.setItem("language", this.currentLang);
+            this.updateUI();
+            this.applyLanguage();
+
+            // Efecto de rotación
+            this.flagIcon.style.transform = "rotateY(180deg)";
+            setTimeout(() => {
+                this.flagIcon.style.transform = "rotateY(0deg)";
+            }, 150);
+        }
+
+        updateUI() {
+            if (this.currentLang === "es") {
+                this.flagIcon.innerHTML = `
+                <span style="
+                    font-family: 'Patua One';
+                    font-weight: 400;
+                    color: red;
+                    letter-spacing: 0.5px;
+                    font-variant-caps: small-caps;
+                ">en</span>`;
+                this.tooltipText.textContent = "Cambiar a inglés";
+            } else {
+                this.flagIcon.innerHTML = `
+                <span style="
+                    font-family: 'Patua One';
+                    font-weight: 400;
+                    color: blue;
+                    letter-spacing: 0.5px;
+                    font-variant-caps: small-caps;
+                ">es</span>`;
+                this.tooltipText.textContent = "Cambiar a español";
+            }
+        }
+
+        showTooltip() {
+            this.tooltip.classList.remove("opacity-0");
+            this.tooltip.classList.add("opacity-100");
+        }
+
+        hideTooltip() {
+            this.tooltip.classList.remove("opacity-100");
+            this.tooltip.classList.add("opacity-0");
+        }
+
+        applyLanguage() {
+            // Actualizar elementos inmediatamente
+            this.updatePageContent();
+
+            // Enviar evento personalizado para que otros componentes escuchen
+            window.dispatchEvent(
+                new CustomEvent("languageChanged", {
+                    detail: { language: this.currentLang },
+                }),
+            );
+        }
+
+        updatePageContent() {
+            const lang = this.currentLang;
+
+            // Actualizar Header
+            const headerAbout = document.getElementById("header-about");
+            const headerProjects = document.getElementById("header-projects");
+            const headerExperience =
+                document.getElementById("header-experience");
+            const headerEducation = document.getElementById("header-education");
+
+            if (headerAbout) {
+                headerAbout.textContent = siteConfig.translations[lang].aboutMe;
+            }
+
+            if (headerProjects) {
+                headerProjects.textContent =
+                    siteConfig.translations[lang].projects;
+            }
+
+            if (headerExperience) {
+                headerExperience.textContent =
+                    siteConfig.translations[lang].experience;
+            }
+
+            if (headerEducation) {
+                headerEducation.textContent =
+                    siteConfig.translations[lang].education;
+            }
+
+            // Actualizar Hero
+            const heroGreeting = document.getElementById("hero-greeting");
+            const heroTitle = document.getElementById("hero-title");
+            const heroNamePrefix = document.getElementById("hero-name-prefix");
+
+            if (heroGreeting) {
+                heroGreeting.textContent = siteConfig.translations[lang].hello;
+            }
+
+            if (heroTitle) {
+                heroTitle.textContent = siteConfig.title[lang];
+            }
+
+            if (heroNamePrefix) {
+                heroNamePrefix.textContent = lang === "es" ? "Soy" : "I'm";
+            }
+
+            // Actualizar Footer
+            const footerTitle = document.getElementById("footer-title");
+            const footerCopyright = document.getElementById("footer-copyright");
+            const footerAbout = document.getElementById("footer-about");
+            const footerProjects = document.getElementById("footer-projects");
+            const footerExperience =
+                document.getElementById("footer-experience");
+            const footerEducation = document.getElementById("footer-education");
+
+            if (footerTitle) {
+                footerTitle.textContent = siteConfig.title[lang];
+            }
+
+            if (footerCopyright) {
+                footerCopyright.textContent = `© ${new Date().getFullYear()} ${siteConfig.name}. ${siteConfig.translations[lang].allRightsReserved}.`;
+            }
+
+            if (footerAbout) {
+                footerAbout.textContent = siteConfig.translations[lang].aboutMe;
+            }
+
+            if (footerProjects) {
+                footerProjects.textContent =
+                    siteConfig.translations[lang].projects;
+            }
+
+            if (footerExperience) {
+                footerExperience.textContent =
+                    siteConfig.translations[lang].experience;
+            }
+
+            if (footerEducation) {
+                footerEducation.textContent =
+                    siteConfig.translations[lang].education;
+            }
+
+            // Actualizar About Me
+            const aboutTitle = document.getElementById("about-title");
+            const aboutContent = document.getElementById("about-content");
+
+            if (aboutTitle) {
+                aboutTitle.textContent = siteConfig.translations[lang].aboutMe;
+            }
+
+            if (aboutContent) {
+                aboutContent.innerHTML = siteConfig.aboutMe[lang];
+            }
+
+            // Actualizar habilidades
+            const skillItems = document.querySelectorAll(".skill-item");
+            skillItems.forEach((skillItem, index) => {
+                const skillText = siteConfig.skills[lang][index];
+                if (skillText) {
+                    skillItem.textContent = skillText;
+                }
+            });
+
+            // Actualizar títulos de secciones
+            const projectsTitle = document.getElementById("projects-title");
+            const experienceTitle = document.getElementById("experience-title");
+            const educationTitle = document.getElementById("education-title");
+
+            if (projectsTitle) {
+                projectsTitle.textContent =
+                    siteConfig.translations[lang].projects;
+            }
+
+            if (experienceTitle) {
+                experienceTitle.textContent =
+                    siteConfig.translations[lang].experience;
+            }
+
+            if (educationTitle) {
+                educationTitle.textContent =
+                    siteConfig.translations[lang].education;
+            }
+
+            // Actualizar proyectos
+            const projectCards = document.querySelectorAll(".project-card");
+            projectCards.forEach((card, index) => {
+                const project = siteConfig.projects[index];
+                if (project) {
+                    const nameEl = card.querySelector(".project-name");
+                    const descEl = card.querySelector(".project-description");
+
+                    if (nameEl && project.name[lang]) {
+                        nameEl.textContent = project.name[lang];
+                    }
+
+                    if (descEl && project.description[lang]) {
+                        descEl.textContent = project.description[lang];
+                    }
+                }
+            });
+
+            // Actualizar experiencia
+            const experienceCards =
+                document.querySelectorAll(".experience-card");
+            experienceCards.forEach((card, index) => {
+                const experience = siteConfig.experience[index];
+                if (experience) {
+                    const titleEl = card.querySelector(".experience-title");
+                    const bulletsContainer = card.querySelector(
+                        ".experience-bullets",
+                    );
+
+                    if (titleEl && experience.title[lang]) {
+                        titleEl.textContent = experience.title[lang];
+                    }
+
+                    if (bulletsContainer && experience.bullets[lang]) {
+                        const bullets =
+                            bulletsContainer.querySelectorAll(
+                                ".experience-bullet",
+                            );
+                        bullets.forEach((bullet, bulletIndex) => {
+                            const bulletText =
+                                experience.bullets[lang][bulletIndex];
+                            if (bulletText) {
+                                bullet.textContent = bulletText;
+                            }
+                        });
+                    }
+                }
+            });
+
+            // Actualizar educación
+            const educationCards = document.querySelectorAll(".education-card");
+            educationCards.forEach((card, index) => {
+                const education = siteConfig.education[index];
+                if (education) {
+                    const schoolEl = card.querySelector(".education-school");
+                    const degreeEl = card.querySelector(".education-degree");
+                    const achievementsContainer = card.querySelector(
+                        ".education-achievements",
+                    );
+
+                    if (schoolEl && education.school[lang]) {
+                        schoolEl.textContent = education.school[lang];
+                    }
+
+                    if (degreeEl && education.degree[lang]) {
+                        degreeEl.textContent = education.degree[lang];
+                    }
+
+                    if (achievementsContainer && education.achievements[lang]) {
+                        const achievements =
+                            achievementsContainer.querySelectorAll(
+                                ".education-achievement",
+                            );
+                        achievements.forEach(
+                            (achievement, achievementIndex) => {
+                                const achievementText =
+                                    education.achievements[lang][
+                                        achievementIndex
+                                    ];
+                                if (achievementText) {
+                                    achievement.textContent = achievementText;
+                                }
+                            },
+                        );
+                    }
+                }
+            });
+        }
+    }
+
+    // Inicializar cuando el DOM esté listo
+    document.addEventListener("DOMContentLoaded", () => {
+        new LanguageManager();
+    });
+</script>
+
+<style>
+    #flag-icon {
+        transition: transform 0.3s ease;
+    }
+
+    #language-toggle button:hover #flag-icon {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 640px) {
+        #language-toggle {
+            bottom: 1rem;
+            right: 1rem;
+        }
+
+        #language-toggle button {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        #flag-icon {
+            font-size: 1.5rem;
+        }
+    }
+</style>
