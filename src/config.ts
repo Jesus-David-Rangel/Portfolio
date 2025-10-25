@@ -12,7 +12,7 @@ export const siteConfig = {
   },
   aboutMe:
     "I am a <span style='color: blue; font-weight: 700;'>Data Analyst</span> specialized in data cleaning, transformation, and visualization to support strategic decision-making. I have advanced proficiency in <span style='color: #217346; font-weight: 700;'>Python</span>, <span style='color: orange; font-weight: 700;'>SQL</span>, <span style='color: red; font-weight: 600;'>Excel</span>, and Business Intelligence tools such as <span style='color: purple; font-weight: 700;'>Power BI</span>. My passion lies in <span style='color: blue; font-weight: 700;'>turning data into a strategic asset</span> that drives business growth and success through actionable insights and evidence-based strategies.",
-  skills: ["Python", "SQL", "Excel", "Power BI", "PostgreSQL", "Git", "GitHub", "Jupyter"],
+  skills: ["Python", "SQL", "Excel", "Power BI", "PostgreSQL", "Git", "GitHub", "Jupyter", "Statistical Analysis", "Data Visualization", "Data Cleaning", "Data Transformation", "Exploratory Data Analysis", "ETL Processes"],
 
 
   projects: [
@@ -20,7 +20,7 @@ export const siteConfig = {
     name: "E-Commerce Sales Insights",
     description:
       "Comprehensive data analysis of an online retail store to uncover purchasing patterns, seasonal trends, and customer behavior using Python libraries for data cleaning, visualization, and reporting.",
-    link: "https://www.kaggle.com/code/jessdavidsilvarangel/sales-analysis",
+    link: "https://github.com/Jesus-David-Rangel/Sales-Insights",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scipy", "StatsModels"],
   },
 
@@ -28,7 +28,7 @@ export const siteConfig = {
     name: "Mall Customer Segmentation",
     description:
       "Segmentation analysis of mall customers to identify distinct groups based on purchasing behavior and demographics. Utilizes clustering techniques and visualization tools to inform targeted marketing strategies.",
-    link: "https://github.com/Jesus-David-Rangel/Customers-Segmentation-Analysis/blob/main/main.ipynb",
+    link: "https://github.com/Jesus-David-Rangel/Customers-Segmentation-Analysis",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
   },
 
@@ -36,7 +36,7 @@ export const siteConfig = {
     name: "California Housing Price Prediction",
     description:
       "Predictive modeling project analyzing the California housing market. Includes spatial and correlational analysis to understand income distribution, property value trends, and key predictors influencing housing prices.",
-    link: "https://github.com/Jesus-David-Rangel/Housing-Price-Analysis/blob/main/Housing_Price_Analysis.ipynb",
+    link: "https://github.com/Jesus-David-Rangel/Housing-Price-Analysis",
     skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
   },
 
@@ -52,7 +52,7 @@ export const siteConfig = {
     name: "Diabetes Risk Prediction & Demographic Analysis",
     description:
       "Exploratory data analysis focused on identifying demographic and lifestyle factors linked to diabetes risk. Features predictive modeling and visualization to highlight key health indicators.",
-    link: "https://github.com/Jesus-David-Rangel/Diabetes-Data-Analysis-with-Python/blob/main/Diabetes-pred.ipynb",
+    link: "https://github.com/Jesus-David-Rangel/Diabetes-Data-Analysis-and-Prediction",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
   },
 
@@ -60,7 +60,7 @@ export const siteConfig = {
     name: "STEM Academic Performance Analysis",
     description:
       "Data-driven exploration of student performance in STEM subjects to identify success factors and patterns in academic achievement, supporting evidence-based educational strategies.",
-    link: "https://github.com/Jesus-David-Rangel/Student-Data-Analysis-with-Python/blob/main/Student_Data_Analysis.ipynb",
+    link: "https://github.com/Jesus-David-Rangel/Student-Performance-Data-Analysis",
     skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
   }
 
@@ -123,7 +123,20 @@ export const siteConfig = {
       "Participated in academic projects focused on data analytics and machine learning"
     ],
   },
+
   {
+    school: "National Learning Service (SENA)",
+    degree: "Associate Degree in Software Analysis and Development",
+    dateRange: "Ene 2018 - Nov 2020",
+    achievements: [
+      "Completed training program.",
+      "Skills in software development, programming, databases, and systems analysis.",
+      "Applied methodologies such as Agile and Scrum in project development."
+    ],
+  },
+
+
+ /*  {
     school: "National Learning Service (SENA)",
     degree: "Administrative Assistant Technician",
     dateRange: "Ene 2018 - Nov 2020",
@@ -132,7 +145,7 @@ export const siteConfig = {
       "Developed skills in administrative management, documentation, and office tools",
       "Applied organizational methodologies and provided operational support"
     ],
-  },
+  }, */
 
   ],
 };
