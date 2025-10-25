@@ -267,12 +267,17 @@
                 const experience = siteConfig.experience[index];
                 if (experience) {
                     const titleEl = card.querySelector(".experience-title");
+                    const dateRangeEl = card.querySelector(".experience-daterange");
                     const bulletsContainer = card.querySelector(
                         ".experience-bullets",
                     );
 
                     if (titleEl && experience.title[lang]) {
                         titleEl.textContent = experience.title[lang];
+                    }
+
+                    if (dateRangeEl && experience.dateRange[lang]) {
+                        dateRangeEl.textContent = experience.dateRange[lang];
                     }
 
                     if (bulletsContainer && experience.bullets[lang]) {
@@ -298,6 +303,7 @@
                 if (education) {
                     const schoolEl = card.querySelector(".education-school");
                     const degreeEl = card.querySelector(".education-degree");
+                    const dateRangeEl = card.querySelector(".education-daterange");
                     const achievementsContainer = card.querySelector(
                         ".education-achievements",
                     );
@@ -308,6 +314,10 @@
 
                     if (degreeEl && education.degree[lang]) {
                         degreeEl.textContent = education.degree[lang];
+                    }
+
+                    if (dateRangeEl && education.dateRange[lang]) {
+                        dateRangeEl.textContent = education.dateRange[lang];
                     }
 
                     if (achievementsContainer && education.achievements[lang]) {

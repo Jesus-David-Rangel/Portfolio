@@ -115,7 +115,10 @@ export const siteConfig = {
       title: { 
         en: "Database Administrator", 
         es: "Administrador de Base de Datos" },
-      dateRange: "Aug 2025 - Present",
+      dateRange: {
+        en: "Aug 2025 - Present",
+        es: "Ago 2025 - Presente"
+      },
       bullets: {
         en: [
           "Manage and administer hospital database systems ensuring data accuracy and security.",
@@ -134,7 +137,10 @@ export const siteConfig = {
     {
       company: "Secretaría de Salud de Tamalameque",
       title: { en: "Data Analyst", es: "Analista de Datos" },
-      dateRange: "Jul 2025 - Present",
+      dateRange: {
+        en: "Jul 2025 - Present",
+        es: "Jul 2025 - Presente"
+      },
       bullets: {
         en: [
           "Analyze public health indicators to support evidence-based policy decisions.",
@@ -153,7 +159,10 @@ export const siteConfig = {
     {
       company: "Outlier AI",
       title: { en: "GenAI Quality Analyst", es: "Analista de Calidad GenAI" },
-      dateRange: "Jun 2024 - Feb 2025",
+      dateRange: {
+        en: "Jun 2024 - Feb 2025",
+        es: "Jun 2024 - Feb 2025"
+      },
       bullets: {
         en: [
           "Evaluated and improved the quality of generative AI model outputs through data analysis.",
@@ -172,7 +181,10 @@ export const siteConfig = {
     {
       company: "Centro Nacional de Consultoría (CNC)",
       title: { en: "Data Analysis Assistant", es: "Asistente de Análisis de Datos" },
-      dateRange: "Feb 2023 - Oct 2024",
+      dateRange: {
+        en: "Feb 2023 - Oct 2024",
+        es: "Feb 2023 - Oct 2024"
+      },
       bullets: {
         en: [
           "Assisted in the analysis of business and operational data to identify performance trends.",
@@ -199,7 +211,10 @@ export const siteConfig = {
         en: "Bachelor’s in Systems Engineering",
         es: "Pregrado Profesional en Ingeniería de Sistemas"
       },
-      dateRange: "Feb 2022 - Jul 2026",
+      dateRange: {
+        en: "Feb 2022 - Jul 2026",
+        es: "Feb 2022 - Jul 2026"
+      },
       achievements: {
         en: [
           "Currently in 8th semester",
@@ -222,7 +237,10 @@ export const siteConfig = {
         en: "Associate Degree in Software Analysis and Development",
         es: "Tecnólogo en Análisis y Desarrollo de Software"
       },
-      dateRange: "Ene 2018 - Nov 2020",
+      dateRange: {
+        en: "Jan 2018 - Nov 2020",
+        es: "Ene 2018 - Nov 2020"
+      },
       achievements: {
         en: [
           "Completed training program.",
@@ -245,7 +263,13 @@ export const siteConfig = {
       experience: "Experience",
       education: "Education",
       allRightsReserved: "All rights reserved",
-      skills: "Skills"
+      skills: "Skills",
+      present: "Present",
+      months: {
+        "Jan": "Jan", "Feb": "Feb", "Mar": "Mar", "Apr": "Apr", 
+        "May": "May", "Jun": "Jun", "Jul": "Jul", "Aug": "Aug",
+        "Sep": "Sep", "Oct": "Oct", "Nov": "Nov", "Dec": "Dec"
+      }
     },
     es: {
       hello: "¡Hola! 👋",
@@ -254,7 +278,13 @@ export const siteConfig = {
       experience: "Experiencia",
       education: "Educación",
       allRightsReserved: "Todos los derechos reservados",
-      skills: "Habilidades"
+      skills: "Habilidades",
+      present: "Presente",
+      months: {
+        "Jan": "Ene", "Feb": "Feb", "Mar": "Mar", "Apr": "Abr", 
+        "May": "May", "Jun": "Jun", "Jul": "Jul", "Aug": "Ago",
+        "Sep": "Sep", "Oct": "Oct", "Nov": "Nov", "Dec": "Dic"
+      }
     }
   }
 };
