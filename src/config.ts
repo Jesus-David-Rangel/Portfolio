@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Jesús David Rangel",
   title: {
     en: "Data Analyst 📊 ~ Business Intelligence 🗂️ ~ Systems Engineering 👨‍💻",
-    es: "Analista de Datos 📊 ~ Inteligencia de Negocios 🗂️ ~ Ingeniería de Sistemas 👨‍💻"
+    es: "Analista de Datos 📊 ~ Inteligencia de Negocios 🗂️ ~  Ingeniero de Sistemas 👨‍💻" // "Analista de Datos 📊 ~ Inteligencia de Negocios 🗂️ ~ Ingeniería de Sistemas
   },
   description: {
     en: "Portfolio Website of Jesús David Rangel",
@@ -29,7 +29,7 @@ export const siteConfig = {
     es: [
       "Python", "SQL", "Excel", "Power BI", "PostgreSQL", "Git", "GitHub",
       "Jupyter", "Limpieza de Datos", "Transformación de Datos", "Análisis Exploratorio de Datos", "Visualización de Datos", "Análisis Estadístico",
-      "Procesos ETL"]
+      "Extracción, Transformación y Carga (ETL)"] // Storytelling con Datos
   },
 
 
